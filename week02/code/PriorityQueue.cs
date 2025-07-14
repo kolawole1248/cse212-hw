@@ -19,6 +19,12 @@ public class PriorityQueue
     }
 
     /// <summary>
+    /// Get the number of items currently in the queue.
+    /// This property is essential for checking the queue's size in tests.
+    /// </summary>
+    public int Length => _queue.Count; // This line was added/uncommented
+
+    /// <summary>
     /// Remove the item with the highest priority and return its value.
     /// If there are more than one item with the highest priority,
     /// then the item closest to the front of the queue will be removed and its value returned.
@@ -71,9 +77,6 @@ public class PriorityQueue
     {
         return $"[{string.Join(", ", _queue)}]";
     }
-
-    // You also need the Length property if it's not already defined for PriorityQueue (it is in your example).
-    // public int Length => _queue.Count;
 }
 
 internal class PriorityItem
